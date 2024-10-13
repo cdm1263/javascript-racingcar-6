@@ -25,7 +25,7 @@ class App {
     try {
       await this.gameManager.play();
     } catch (error) {
-      this.io.print(error.message);
+      throw new Error(error.message);
     }
   }
 }

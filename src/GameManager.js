@@ -35,7 +35,9 @@ export class GameManager {
     }
 
     if (names.some((name) => name.length > GAME_NUMBERS.MAX_NAME_LENGTH)) {
-      throw new Error("[ERROR] 5자 이하로 작성해야 합니다.");
+      throw new Error(
+        `[ERROR] ${GAME_NUMBERS.MAX_NAME_LENGTH}자 이하로 작성해야 합니다.`
+      );
     }
 
     if (new Set(names).size !== names.length) {
@@ -43,7 +45,9 @@ export class GameManager {
     }
 
     if (names.length < GAME_NUMBERS.MIN_CARS) {
-      throw new Error("[ERROR] 2개 이상의 이름을 적어주세요.");
+      throw new Error(
+        `[ERROR] ${GAME_NUMBERS.MIN_CARS}개 이상의 이름을 적어주세요.`
+      );
     }
   }
 
